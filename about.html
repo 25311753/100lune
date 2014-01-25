@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<title>百伦科技</title>
+<link rel="icon" type="image/png" href="images/favicon.ico" />
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png" />
+<!--[if lt IE 9]>
+<script src="scripts/ie9.js">IE7_PNG_SUFFIX=".png";</script>
+<![endif]-->
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="stylesheets/style.css" /> 
+<link rel="stylesheet" href="stylesheets/responsive.css" /> 
+<script src="scripts/jquery.min.js"></script> 
+<script src="scripts/jquery.bxSlider.min.js"></script>
+<script src="scripts/jquery.blackandwhite.min.js"></script>
+<script src="scripts/js_func.js"></script>
+<script>
+$(function(){
+	$('.features_slider').bxSlider({
+		auto: false,
+		displaySlideQty: 5,
+		moveSlideQty: 1,
+    	speed : 1000
+	});
+	$('.intro_slider').bxSlider({
+		auto: false,
+		controls : false,
+		mode: 'fade',
+		pager: true
+	});	
+    $('.bwWrapper').BlackAndWhite({
+        hoverEffect : true,
+        webworkerPath : false,
+        responsive:true,
+        invertHoverEffect:false
+    });
+});
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+<body>
+<div class="wraper">
+ <header class="header">
+  <a class="logo" href="index.html">construct</a>
+  <nav>
+  <!-- top menu -->
+   <ul>
+    <li><a href="index.html">首页</a>    </li>    
+    <li><a href="services.html">主营产品</a>
+	<li><a href=".html">案例展示</a>    </li>
+    <li><a href="about.html">关于百伦</a>    </li>
+    <li><a href="contact_us.html">联系我们</a>    </li>
+   </ul>
+  <!-- /top menu -->
+  </nav>
+ </header>
+</div>
+
+<div class="content_block">
+ <!-- top_title -->
+ <div class="top_title">
+  <div class="wraper">
+   <h2>关于百伦<span>We think you'll love to work with us</span></h2>
+  </div>
+ </div>
+ <!-- /top_title -->
+ <div class="wraper">
+  <!-- intro text -->
+  <div class="intro_text">
+   <ul >
+    <li>
+     <div class="bwWrapper"><img src="images/about_us/about_us_slide_2.png" width="426" height="238" alt="" /></div>
+     <div class="desc">
+      <h4>致力效率，凝聚核心价值</h4>
+      <p>广州百伦信息技术有限公司是一家以企业信息管理软件研发运营、移动互联应用研发运行推广、云存储为核心的综合性高科技企业。
+     百伦为客户提供手机客户端、手机网站、行业信息管理等产品的研发与运营，涵盖外贸机构、政府医疗机构、零售业等众多行业领域。
+     我们致力于从企业自生实际业务出发，为企业提供量身定制开发服务，产品包括：生产企业ERP、外贸报关管理系统、仓储管理系统、企业云数据应用、企业公司考勤系统、视频录制点播与监控系统、中小新生公司手机移动应用的开发与推广。为客户提供优秀的产品、解决方案，帮助客户提高工作效率和自身市场拓展是每一个百伦人的使命，欢迎您与百伦共赢！
+</p>
+     </div>
+    </li>
+   </ul>
+  </div>
+  <!-- /intro text -->
+  <!-- process -->
+  <div class="process">
+   <h4>Our Process</h4>
+   <ul>
+    <li>
+     <h3><span>Step 1</span> 需求调研</h3>
+    </li>
+    <li>
+     <h3><span>Step 2</span> 系统设计</h3>
+    </li>
+    <li>
+     <h3><span>Step 3</span> 开发</h3>
+    </li>
+    <li>
+     <h3><span>Step 4</span> 售后维护</h3>
+    </li>
+   </ul>
+  </div>
+ 
+ </div>
+</div>
+ 
+<!-- footer -->
+<!-- copyright -->
+<div class="copyright" align="center">
+ <div class="wraper">
+  <p><span>广州百伦信息技术有限公司 Copyright © 2014 粤ICP备14000290号</span>All Rights Reserved</p>
+ </div>
+</div>
+<!-- /copyright -->
+<!-- /footer -->
+</body>
+</html> 

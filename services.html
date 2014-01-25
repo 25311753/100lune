@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<title>百伦科技</title>
+<link rel="icon" type="image/png" href="images/favicon.ico" />
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png" />
+<!--[if lt IE 9]>
+<script src="scripts/ie9.js">IE7_PNG_SUFFIX=".png";</script>
+<![endif]-->
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="stylesheets/style.css" /> 
+<link rel="stylesheet" href="stylesheets/responsive.css" /> 
+<script src="scripts/jquery.min.js"></script> 
+<script src="scripts/jquery.blackandwhite.min.js"></script>
+<script src="scripts/js_func.js"></script>
+<script>
+$(function(){
+    $('.bwWrapper').BlackAndWhite({
+        hoverEffect : true,
+        webworkerPath : false,
+        responsive:true,
+        invertHoverEffect:false
+    });
+</script>
+<script>
+$(function(){
+	function getQueryString(name)
+	{
+		// 如果链接没有参数，或者链接中不存在我们要获取的参数，直接返回空
+		if(location.href.indexOf("?")==-1 || location.href.indexOf(name+'=')==-1)
+		{
+			return '';
+		}
+	 
+		// 获取链接中参数部分
+		var queryString = location.href.substring(location.href.indexOf("?")+1);
+	 
+		// 分离参数对 ?key=value&key2=value2
+		var parameters = queryString.split("&");
+	 
+		var pos, paraName, paraValue;
+		for(var i=0; i<parameters.length; i++)
+		{
+			// 获取等号位置
+			pos = parameters[i].indexOf('=');
+			if(pos == -1) { continue; }
+	 
+			// 获取name 和 value
+			paraName = parameters[i].substring(0, pos);
+			paraValue = parameters[i].substring(pos + 1);
+	 
+			// 如果查询的name等于当前name，就返回当前值，同时，将链接中的+号还原成空格
+			if(paraName == name)
+			{
+				return unescape(paraValue.replace(/\+/g, " "));
+			}
+		}
+		return '';
+	};
+ 
+//http://localhost/test.html?aa=bb&test=cc+dd&ee=ff
+//alert(getQueryString('tab'));
+    var arg_tab_order=getQueryString('tab_order')
+
+	$('#tabs div').hide();
+	$('#tabs div:first').show();
+	$('#tabs ul li:first').addClass('active');
+
+	if (arg_tab_order){
+		$('#tabs ul li').removeClass('active');
+		var currentTab = '#tab-'+arg_tab_order;
+		var p_currentTab = '#tabs ul li:eq('+arg_tab_order+')';
+		$('#tabs div').hide();
+		$(currentTab).show();
+		$(p_currentTab).addClass('active');
+	}
+
+});
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+<body>
+<div class="wraper">
+ <header class="header">
+  <a class="logo" href="index.html">construct</a>
+  <nav>
+  <!-- top menu -->
+   <ul>
+    <li><a href="index.html">首页</a>    </li>    
+    <li><a href="services.html">主营产品</a>
+	<li><a href="cases.html">案例展示</a>    </li>
+    <li><a href="about.html">关于百伦</a>    </li>
+    <li><a href="contact_us.html">联系我们</a>    </li>
+   </ul>
+  <!-- /top menu -->
+  </nav>
+ </header>
+</div>
+
+<div class="content_block">
+ <!-- top_title -->
+ <div class="top_title">
+  <div class="wraper">
+   <h2>Bolune's Services<span>We can handle anythign you need.  Check out our services below!</span></h2>
+  </div>
+ </div>
+ <!-- /top_title -->
+ <div class="wraper">
+  <!-- services option2 -->
+  <div class="services_option2">   
+	<div id="tabs">
+     <ul class="tab_select">
+      <li><a href="#tab-1">企业资源管理ERP</a></li>
+      <li><a href="#tab-2">客户关系管理CRM</a></li>
+      <li><a href="#tab-3">进销存管理系统</a></li>
+      <li><a href="#tab-4">企业网站</a></li>
+      <li><a href="#tab-5">移动APP开发</a></li>
+     </ul>
+     <div id="tab-1">
+      <h3>Enterprise Resource Planning</h3>
+      <p class="bwWrapper"><img src="images/services_process/services_1.png" width="298" height="193" alt="" /></p>
+ 
+      <ul>
+       	<li>生产管理：工程材料清单、调度、产能、工作流管理、质控、成本管理、生产过程、生产流程、生产配置</li>
+       	<li>进销存货管理：库存、订单输入、采购、供应商调度、货物检查、付款请求处理、佣金计算</li>
+	   	<li>财务管理及会计项目：总帐、现金管理、应付帐款管理、应收帐款管理、票据资金管理、固定资产管理</li>
+		<li>成本管理：账单、时间和支出、活动管理</li>
+		<li>人力资源管理：人力资源、薪金名册、培训管理、员工班别和出勤管理、津贴、劳健保、绩效考核</li>
+		<li>供应链管理：和客户、供应商、员工之间的各种自服务接口</li>
+      </ul>
+     </div>
+	 
+     <div id="tab-2">
+      <h3>Customer Relationship Management</h3>
+      <p class="bwWrapper"><img src="images/services_process/services_2.png" width="298" height="193" alt="" /></p>
+      <ul>
+		<li>顾客数据：指的是企业对顾客集成性信息的搜集，包括人口统计信息、消费心理特性、消费需求、消费行为模式、交易纪录、信用等等，以充分了解顾客轮廓。</li>
+		<li>顾客知识：指的是与顾客有关，由信息转换而来，更深更广、更能指导CRM的一些经验法则与因果关系等。</li>
+		<li>顾客化/定制化：指的是为单一顾客量身订制符合其个别需求的P/S，例如一对一的价格、一对一的促销、一对一的通路。此为CRM重要的手段之一，亦即由大量营销→区隔营销→一对一营销</li>
+		<li>顾客价值：指的是顾客期望从特定P/S所能获得利益的集合，包括产品价值、服务价值、员工友谊价值、品牌价值等。CRM的目的在提高顾客的所有价值，与降低其所有的成本。</li>
+		<li>顾客满意度：指的是顾客比较其对P/S质量的‘期望’与‘实际感受’后，所感觉的一种愉悦或失望的程度。</li>
+		<li>顾客的发展：指的是对于目前的老顾客，应想尽办法提升其对本公司的荷包贡献度（Wallet Ration）</li>
+		<li>顾客保留率（维系率，）：指的是在于如何留住有价值的老顾客，不让其流失，利用优秀、贴心、量身订制的产品与服务来提升顾客的满意度，以降低其流失率，获取其一辈子的净值。</li>
+		<li>顾客赢取率：指的是利用提供比竞争对手更高价值的产品与服务，来吸引及获取新顾客的青睐与采购。</li>
+		<li>顾客获利率：指的是顾客终身对企业所贡献的利润，亦即其终生的采购金额扣除企业花在其身上的营销与管理成本。</li>
+      </ul>
+     </div>
+	 
+     <div id="tab-3">
+      <h3>Purchase-Sales-inventory Management</h3>
+      <p class="bwWrapper"><img src="images/services_process/services_3.png" width="298" height="193" alt="" /></p>      
+      <ul>
+       <li>库存管理：最大库存量、安全库存量、库存历史情况、盘点、结算</li>
+       <li>采购管理：供应商报价、请购单、订单、收货、退货、结帐</li>
+	   <li>销售管理：销售计划、销售订单、发票管理、结帐管理、销售费用管理、各种报表</li>
+      </ul>
+     </div>
+	 
+     <div id="tab-4">
+      <h3>Enterprise Information Protal</h3>
+      <p class="bwWrapper"><img src="images/services_process/services_4.png" width="298" height="193" alt="" /></p>      
+      <ul>
+       <li>首页</li>
+       <li>公司简介：公司基本信息介绍,让客户概要了解贵公司</li>
+	   <li>产品展示：滚动展示公司成功产品</li>
+	   <li>新闻动态：重大信息发布、有价值资讯发布</li>
+	   <li>客户案例：介绍公司所承接的业务、客户情况,从业务角度展示公司实力</li>
+	   <li>人才招聘：发布招聘信息</li>
+	   <li>在线留言：吸纳顾客反馈</li>
+	   <li>联系我们：公司联系信息</li>
+      </ul>
+     </div>
+	 
+     <div id="tab-5">
+      <h3>Mobile Application</h3>
+      <p class="bwWrapper"><img src="images/services_process/services_app.png" width="298" height="193" alt="" /></p>
+      <ul>
+			<li>企业展示\品牌营销：适合各种企业/品牌在移动互联网上的形象宣传展示推广。</li>
+			<li>行业信息门户：为行业门户网站量身定移动APP，包括但不限于行业门户、图片门户、新闻门户、交友门户、信息门户、电子政务等各类行业门户型网站</li>
+			<li>移动办公：将企业应用扩展到移动端并且确保数据安全性，为企业实现办公系统移动化，实现跨手机操作系统平台的移动办公，考勤管理</li>	   
+			<li>移动电商：为电子商务类型企业或品牌量身定制基于智能移动设备的移动APP。APP数据可与淘宝平台，电商网站等进行同步数据更新</li>
+			<li>销售工具\内部沟通：将企业信息，产品信息，工程案例，解决方案等集合到平板电脑上，销售人员或服务人员可随时随地通过平板电脑给客户演示及讲解。资料通过后台更新后，平板端也同步更新，节省更新成本。</li>
+      </ul>
+     </div> 
+    </div>
+  </div>
+  <!-- /services option2 -->  
+ </div>
+</div>
+
+
+<!-- footer -->
+<!-- copyright -->
+<div class="copyright" align="center">
+ <div class="wraper">
+  <p><span>广州百伦信息技术有限公司 Copyright © 2014 粤ICP备14000290号</span>All Rights Reserved</p>
+ </div>
+</div>
+<!-- /copyright -->
+<!-- /footer -->
+</body>
+</html> 
