@@ -15,9 +15,10 @@ input:focus, textarea:focus {outline:none;}
 .bwWrapper {position:relative;display:block;}
 
 /* header */ 
+/*.header {position:relative;min-height:180px;z-index:1001;}*/
 .header {position:relative;min-height:108px;z-index:1001;}
 /*.header .logo, .header .logo:visited {text-indent:-999em;cursor:pointer;background:url(../images/logo.png) no-repeat;display:block;width:175px;height:37px;position:absolute;top:37px;left:0;}*/
-.header .logo, .header .logo:visited {text-indent:-999em;cursor:pointer;background:url(../images/logo_bolune.png) no-repeat;display:block;width:505px;height:150px;position:absolute;top:5px;left:-70px;}
+.header .logo, .header .logo:visited {text-indent:-999em;cursor:pointer;background:url(../images/logo_bolune.png) no-repeat;display:block;width:505px;height:150px;position:absolute;top:0px;left:-70px;}
 	/* top menu */
 .header nav {position:absolute;top:48px;right:0;}
 .header nav ul {zoom:1;}
@@ -414,6 +415,7 @@ body.index_v2 .copyright .top, body.index_v2 .copyright .top:visited {right:30px
 /* Home Version 8 */
 	/* intro text */
 .intro_text {padding:10px 0 50px 0;}
+/*.intro_text .bwWrapper {border:5px solid #f6f3f3;float:left;font-size:0;line-height:0;}*/
 .intro_text .bwWrapper {border:5px solid #f6f3f3;float:left;font-size:0;line-height:0;}
 .intro_text div.desc {float:right;width:475px;}
 .intro_text div.desc h4 {padding-bottom:15px;}
